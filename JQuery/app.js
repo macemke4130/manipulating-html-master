@@ -44,8 +44,6 @@ $('#myP').after($myNameDiv);
 $('#myP').after($nameButton);
 $('#myP').after('<h3>Step Five</h3>');
 
-
-
 $('#nameButton').click(function () {
     const myNameSpan = $('<span></span>');
     myNameSpan.attr("id", "myNameSpan");
