@@ -1,0 +1,12 @@
+#square {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+p {
+    user-select: none;
+    font-family: monospace, sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+}
