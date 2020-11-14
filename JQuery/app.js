@@ -1,7 +1,9 @@
+
 $myBtn = $('<button></button>');
 $myBtn.attr('id', 'myBtn');
 $myBtn.text('Nice Message');
-$(document.body).append($myBtn);
+$(document.body).prepend($myBtn);
+$(document.body).prepend('<h3>Step One</h3>');
 
 $('#myBtn').click(function () {
     alert("You have a nice smile today.");
@@ -38,8 +40,11 @@ const $nameButton = $('<button></button>');
 $nameButton.attr('id', 'nameButton');
 $nameButton.text('What is my name?');
 
-$(document.body).append($nameButton);
-$(document.body).append($myNameDiv);
+$('#myP').after($myNameDiv);
+$('#myP').after($nameButton);
+$('#myP').after('<h3>Step Five</h3>');
+
+
 
 $('#nameButton').click(function () {
     const myNameSpan = $('<span></span>');
@@ -49,3 +54,16 @@ $('#nameButton').click(function () {
 });
 
 const colors = ["red", "blue", "orange", "brown", "green", "gold"];
+const friends = ["Sarah", "Lilah", "Dan", "Eric", "Alex", "Dave", "Maggie", "Anna", "Laura", "Nick", "Emily", "Keight", "Alan"];
+let friendCount = 0;
+
+$('#addFriend').click(function () {
+    if (friendCount < friends.length) {
+        $('#friendList').append('<li id="li' + friendCount + '"></li>');
+        $('#li' + friendCount).text(friends[friendCount]);
+        friendCount++;
+    } else {
+        alert("I don't have any more friends!");
+    }
+
+});
